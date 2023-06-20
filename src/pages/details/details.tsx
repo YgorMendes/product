@@ -1,12 +1,14 @@
 import React from 'react';
 import { PageHeader, Content } from '@neogrid/design-system';
 
-export const Home = () => {
+function Details() {
   return (
     <>
-      <PageHeader title="Home" subTitle="Product home page" />
+      <PageHeader title="Details" subTitle="Product details page" />
 
       <Content className="contant-page">Content</Content>
     </>
   );
-};
+}
+
+export default Details;

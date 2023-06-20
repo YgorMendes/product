@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { HomeOutlined, UserOutlined } from '@ant-design/icons';
+import { HomeOutlined } from '@ant-design/icons';
 import { Logo } from '../../assets/logo';
 import { Menu, Sider } from '@neogrid/design-system';
 import './styles.less';
@@ -23,8 +23,8 @@ export const AsideMenu = () => {
     if (itemSelectedStore) {
       setDefaultSelectedItem(itemSelectedStore);
     }
-    if (url.includes('login')) {
-      setDefaultSelectedItem('login');
+    if (url.includes('details')) {
+      setDefaultSelectedItem('details');
     }
   }, [url, itemSelectedStore]);
 
@@ -42,6 +42,15 @@ export const AsideMenu = () => {
       onClick: () => {
         navigate('/');
         clickItem('home');
+      }
+    },
+    {
+      label: 'Details',
+      id: 'details',
+      icon: <HomeOutlined />,
+      onClick: () => {
+        navigate('/details');
+        clickItem('details');
       }
     }
   ];

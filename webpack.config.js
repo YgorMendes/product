@@ -6,8 +6,6 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     publicPath: 'http://localhost:3001/',
-    filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'dist')
   },
   devServer: {
     port: 3001,
